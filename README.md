@@ -20,8 +20,9 @@ npx create-eth@latest -e request-network
 
 ### Tailwind color scheme
 
-SE2 Extensions currently do not allow custom tailwind configurations. You can manually replace the light theme in `packages/nextjs/tailwind.config.js` by the code below to get the Request Network color scheme:
+SE2 Extensions currently do not allow custom tailwind configurations. You can manually replace the themes in `packages/nextjs/tailwind.config.js` by the code below to get the Request Network color scheme:
 ```
+    themes: [
       {
         light: {
           primary: "#0BB489", // dark green
@@ -55,6 +56,40 @@ SE2 Extensions currently do not allow custom tailwind configurations. You can ma
           },
         },
       },
+      {
+        dark: {
+          primary: "#0BB489",            // Vibrant green
+          "primary-content": "#F9FBFF",  // Light text on primary
+          secondary: "#05856E",          // Darker green for secondary
+          "secondary-content": "#F9FBFF",// Light text on secondary
+          accent: "#046F5A",             // Even darker green for accents
+          "accent-content": "#F9FBFF",   // Light text on accent
+          neutral: "#1A1A1A",            // Near-black neutral background
+          "neutral-content": "#0BB489",  // Green content on neutral background
+          "base-100": "#2C7F6E",         // Black-like base background
+          "base-200": "#217B64",         // Slightly lighter than base-100
+          "base-300": "#196D54",         // Another step lighter, still very dark
+          "base-content": "#F9FBFF",     // Light content on dark base
+          info: "#0BB489",               // Consistent info color with primary
+          success: "#34EEB6",
+          warning: "#FFCF72",
+          error: "#FF8863",
+
+          "--rounded-btn": "9999rem",
+
+          ".tooltip": {
+            "--tooltip-tail": "6px",
+            "--tooltip-color": "oklch(var(--p))",
+          },
+          ".link": {
+            textUnderlineOffset: "2px",
+          },
+          ".link:hover": {
+            opacity: "80%",
+          },
+        },
+      },
+    ],
 ```
 
 ## Pages and components
