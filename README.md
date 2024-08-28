@@ -15,7 +15,7 @@ For detailed instructions and more context, check out the [Developer Documentati
 ## Installation
 
 ```shell
-npx create-eth@latest -e request-network
+npx create-eth@latest -e arjanjohan/scaffold-request-extension
 ```
 
 ### Tailwind color scheme
