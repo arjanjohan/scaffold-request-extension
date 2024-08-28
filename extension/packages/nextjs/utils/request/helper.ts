@@ -29,30 +29,6 @@ export const findCurrency = (currencyAddress: string, network: string) => {
   );
 };
 
-export function clientToSigner(address: string, chain: Chain) {
-  const network = {
-    chainId: chain.id,
-    name: chain.name,
-    ensAddress: chain.contracts?.ensRegistry?.address,
-  };
-  console.log("chain", chain);
-  const rpc_url = chain.rpcUrls.default.http[0];
-  console.log("rpc_url", rpc_url);
-  const provider = new providers.JsonRpcProvider(rpc_url, network);
-  const signer = provider.getSigner(address);
-  console.log("signer", signer);
-  return signer;
-}
-export function clientToProvider(chain_id: number, chain_name: string, ens_address: string, rpc_url: string) {
-  const network = {
-    chainId: chain_id,
-    name: chain_name,
-    ensAddress: ens_address,
-  };
-  console.log("rpc_url", rpc_url);
-  return new providers.JsonRpcProvider(rpc_url, network);
-}
-
 export const keyLabelMapping: { [key: string]: string } = {
   firstName: "First Name",
   lastName: "Last Name",
@@ -78,4 +54,3 @@ export const displayOrder = [
   "address.country-name",
   "email",
 ];
-
