@@ -64,7 +64,7 @@ const Dashboard: React.FC = () => {
           <button
             key={tab}
             className={`px-4 py-2 mx-2 rounded ${
-              activeTab === tab ? "bg-primary text-primary-content" : "bg-base-300 text-base-content"
+              activeTab === tab ? "bg-primary text-primary-content" : "bg-base-100 text-base-content"
             }`}
             onClick={() => setActiveTab(tab as "All" | "Pay" | "Get Paid")}
           >

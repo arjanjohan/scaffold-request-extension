@@ -23,7 +23,7 @@ npx create-eth@latest -e arjanjohan/scaffold-request-extension
 SE2 Extensions currently do not allow custom tailwind configurations. You can manually replace the themes in `packages/nextjs/tailwind.config.js` by the code below to get the Request Network color scheme:
 
 ```
-    themes: [
+themes: [
       {
         light: {
           primary: "#0BB489", // dark green
@@ -37,7 +37,7 @@ SE2 Extensions currently do not allow custom tailwind configurations. You can ma
           "neutral-content": "#ffffff",
           "base-100": "#58E1A5", // light green
           "base-200": "#f4f8ff", // bg (white)
-          "base-300": "#58E1A5",
+          "base-300": "#0BB489",
           "base-content": "#02050f",
           info: "#adfa91",
           success: "#58E1A5",

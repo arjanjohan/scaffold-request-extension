@@ -129,12 +129,11 @@ const InvoiceDetails: React.FC = () => {
         }
         return null;
       });
-
       return <>{elements}</>;
     };
-
-    if (!details || Object.keys(details).length === 0) return null;
-
+    console.log("details", details);
+    if (!details || Object.keys(details).length === 1 && Object.keys(details.address || {}).length === 0 || Object.keys(details).length === 0)  return null;
+    
     return <div className="p-4 bg-base-100 rounded-lg">{renderObjectFields(details)}</div>;
   };
 
@@ -247,7 +246,7 @@ const InvoiceDetails: React.FC = () => {
       {invoiceData.memo && (
         <section className="mb-6">
           <h2 className="text-xl font-semibold">Memo</h2>
-          <div className="p-4 bg-base-100 rounded-lg text-primary-content">
+          <div className="p-4 bg-base-100 rounded-lg">
             <p>{invoiceData.memo}</p>
           </div>
         </section>
@@ -256,7 +255,7 @@ const InvoiceDetails: React.FC = () => {
       {/* Pay Now Button */}
       {(invoiceData.state === "Created" || invoiceData.state === "Pending") && invoiceData.to === address && (
         <div className="text-right">
-          <button className="bg-primary text-primary-content py-2 px-4 rounded" onClick={payInvoice}>
+          <button className="bg-secondary text-primary-content py-2 px-4 rounded" onClick={payInvoice}>
             Pay now 💸
           </button>
         </div>
