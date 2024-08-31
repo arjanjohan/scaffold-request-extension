@@ -1,6 +1,4 @@
 import { Types } from "@requestnetwork/request-client.js";
-import { providers } from "ethers";
-import type { Chain, Client, Transport } from "viem";
 import { currencies } from "~~/utils/request/currencies";
 
 export const calculateStatus = (state: string, expectedAmount: bigint, balance: bigint) => {
