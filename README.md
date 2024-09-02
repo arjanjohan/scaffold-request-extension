@@ -1,6 +1,6 @@
 # 🏗 Scaffold-ETH 2 Request Network Extension
 
-This SE2 extension comes with pre-configured Request Network pages and components to create and view invoices.
+This SE2 extension comes with pre-configured Request Network pages and components to create and view invoices. [Preview the template here.](https://scaffold-request.vercel.app/)
 
 ## 💸 Request Network
 
@@ -28,8 +28,6 @@ Custom page that displays an overview of invoices sent and received. Clicking on
 
 ### Invoice Details
 Custom pages that displays the details of an invoice.
-
-
 
 ## Team
 This extension is created by [arjanjohan](https://x.com/arjanjohan) for the [Scaffold-ETH 2 Extensions Hackathon](https://extensions.buidlguidl.com/).
